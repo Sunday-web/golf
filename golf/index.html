@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>高尔夫专车</title>
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!--轮播图插件-->
+    <link href="css/flickerplate.css"  type="text/css" rel="stylesheet">
+    <script src="js/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+    <script src="js/flickerplate.min.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="js/jsAddress.js"></script>-->
+
+</head>
+<script>
+    $(document).ready(function(){
+
+        $('.flicker-example').flicker();
+    });
+</script>
+<body>
+<div data-role="page">
+    <div>
+        <div class="flicker-example" data-block-text="false">
+            <ul>
+                <li data-background="img/1.jpg">
+                </li>
+
+                <li data-background="img/2.jpg">
+                </li>
+
+                <li data-background="img/3.jpg">
+                </li>
+                <li data-background="img/4.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <form method="post" action="demoform.asp">
+            <div class="ui-field-contain">
+                <label for="fname">姓名:</label>
+                <input style="text-align: center" type="text" name="fname" id="fname">
+                <label for="lname">电话:</label>
+                <input style="text-align: center" type="text" name="lname" id="lname">
+            </div>
+            <!--<input type="submit" value="提交" data-icon="check" data-iconpos="right" data-inline="false">-->
+        </form>
+    </div>
+
+    <div data-role="main" class="ui-content" style="margin-top: -8%;margin-bottom: 60px">
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="fieldcontain">
+                <label for="">球场选择：</label>
+                <select name="" id="" data-native-menu="false">
+                    <option value="">请选择球场</option>
+                    <option value="">沈阳XX高尔夫球场</option>
+                    <option value="">沈阳XX高尔夫球场</option>
+                    <option value="">沈阳XX高尔夫球场</option>
+
+                </select>
+            </fieldset>
+            <label for="">出发日期时间：</label>
+            <input style="text-align: center;" type="datetime-local" name="">
+
+            <!--隐藏省-->
+            <div style="display: none">
+            <label for="">乘车地点：</label>
+            <select data-native-menu="false" id="cmbProvince"></select>
+            </div>
+
+
+            <p>乘车地点：</p>
+            <select id="selectProvince">
+                <option value="-1">请选择城市</option>
+            </select>
+            <p>区域：</p>
+            <select id="selectCity">
+                <option value="-1">请选择地区</option>
+            </select>
+
+            <label for="">详细地址：</label>
+            <input type="text" name="">
+            <label for="">车型：</label>
+            <select name=""  data-native-menu="false">
+                <option value="">请选择车型</option>
+                <option value="">车型1</option>
+                <option value="">车型2</option>
+                <option value="">车型3</option>
+            </select>
+            <label for="">行程天数：</label>
+            <select name=""  data-native-menu="false">
+                <option value="">请选择天数</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+                <option value="">11</option>
+                <option value="">12</option>
+                <option value="">13</option>
+                <option value="">14</option>
+                <option value="">15</option>
+            </select>
+            <label for="">原价：</label>
+            <div class="" style="width: 100%;height: 38px;border: 1px solid #b5b1b1;border-radius: 5px;text-align: center;line-height: 38px;">
+            <s style="color:#ff0000">299</s>
+            </div>
+            <label for="">价格：</label>
+            <div class="" style="width: 100%;height: 38px;border: 1px solid #b5b1b1;border-radius: 5px;text-align: center;line-height: 38px;">
+                <span style="color:#ff0000">系统自动生成</span>
+            </div>
+            <input type="submit" value="提交" data-icon="check" data-iconpos="right" data-inline="false">
+        </form>
+    </div>
+
+
+    <div data-role="navbar" style="position: fixed; bottom: 0px; width: 100%;">
+        <ul>
+            <li><a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-top ui-btn-active">首页</a></li>
+            <li><a href="order.html" class="ui-btn ui-icon-user ui-btn-icon-top">订单</a></li>
+            <li><a href="wait.html" class="ui-btn ui-icon-shop ui-btn-icon-top">待支付</a></li>
+        </ul>
+    </div>
+</div>
+<script src="./js/province-and-city-json.js" charset="utf-8"></script>
+<script src="./js/create-province-and-city.js" charset="utf-8"></script>
+
+<!--<script type="text/javascript">-->
+    <!--addressInit('cmbProvince', 'cmbCity', 'cmbArea', '辽宁', '沈阳', '大东区');-->
+<!--</script>-->
+</body>
+</html>

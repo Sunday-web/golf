@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>支付页面</title>
+    <!-- 引入 jQuery Mobile 样式 -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- 引入 jQuery 库 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 引入 jQuery Mobile 库 -->
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="header">
+    <h1>正在支付。。。</h1>
+</div>
+
+<div data-role="main" class="ui-content" style="margin-bottom: -40px;">
+    <div data-role="collapsibleset">
+
+        <div style="margin-bottom: 10px;" data-role="collapsible" data-collapsed="false">
+            <h3>订单号：<span>88888888</span></h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">基本信息</li>
+                <li><a class="ui-btn ui-icon-check ui-btn-icon-right">球场:<span>XX球场</span></a></li>
+                <li><a class="ui-btn ui-icon-check ui-btn-icon-right">日期时间:<span>2016.09.01</span></a></li>
+                <li><a class="ui-btn ui-icon-check ui-btn-icon-right">乘车地点：</a></li>
+                <div class="ui-collapsible-content ui-body-inherit" aria-hidden="false">
+                    <p>沈阳市大东区天润广场沈阳市大东区天润广场123456798</p>
+                </div>
+                <li><a class="ui-btn ui-icon-check ui-btn-icon-right">车型:<span>车型1</span></a></li>
+                <li><a class="ui-btn ui-icon-check ui-btn-icon-right">行程天数:<span>5</span></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<div data-role="main" class="ui-content" style="margin-bottom: 60px;">
+    <h3>请选择支付方式:</h3>
+    <fieldset data-role="controlgroup">
+        <label for="wx"><img src="img/weixin.png" style="position: absolute;right: 1.2rem;top: 50%;margin-top: -27px;">
+            <h3>微信支付</h3><small><i style="color: #b5b1b1">亿万用户的选择，更快捷安全</i></small>
+        </label>
+        <input type="radio" name="payway" id="wx" value="wx">
+
+        <label style="border-radius: 0 0 10px 10px;border-bottom: 1px solid #ddd;" for="un"><img src="img/union.png" style="position: absolute;right: 1rem;top: 50%;margin-top: -27px;width: 80px;height: 54px;">
+            <h3>银联支付</h3>
+            <small><i style="color: #b5b1b1">银联在线支付</i></small>
+        </label>
+        <input type="radio" name="payway" id="un" value="un">
+        <button style="background: #5fdc52;border-radius: 15px;width: 60%;margin: 15px auto auto auto;" class="ui-btn ui-icon-check ui-btn-icon-right">确认支付</button>
+    </fieldset>
+</div>
+
+
+<!--底部导航-->
+<!--<div data-role="navbar" style="position: fixed; bottom: 0px; width: 100%;">-->
+    <!--<ul>-->
+        <!--<li><a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-top">首页</a></li>-->
+        <!--<li><a href="order.html" class="ui-btn ui-icon-user ui-btn-icon-top">订单</a></li>-->
+        <!--<li><a href="wait.html" class="ui-btn ui-icon-shop ui-btn-icon-top ui-btn-active">待支付</a></li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+</body>
+</html>
